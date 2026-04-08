@@ -1,0 +1,5 @@
+# aictx ignore file
+# 在此处配置不需要被 AI 读取的敏感或无价值文件
+node_modules
+.env*
+dist

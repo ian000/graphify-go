@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/aictx/schema.json",
+  "version": "1.0",
+  "repository": "",
+  "ides": [
+    "trae"
+  ],
+  "tags": [
+    "backend",
+    "golang",
+    "tree-sitter",
+    "graphify",
+    "graphify-go"
+  ],
+  "overrides": {}
+}
