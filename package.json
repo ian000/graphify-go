@@ -1,5 +1,5 @@
 {
-  "name": "@aictx/graphify-go",
+  "name": "graphify-go",
   "version": "1.0.0",
   "description": "Zero-dependency, pure local AST extraction & graph architecture engine powered by Go and Tree-sitter.",
   "main": "index.js",

@@ -51,7 +51,7 @@ func main() {
 	// 4. 运行社区发现 (Louvain)
 	fmt.Println("🧠 Running Community Detection (Louvain)...")
 	cluster.DetectCommunities(g)
-	
+
 	// 统计社区分布
 	commCount := make(map[int]int)
 	for _, n := range g.Nodes {
@@ -77,6 +77,12 @@ func main() {
 			log.Fatalf("❌ Failed to write graph.json: %v\n", err)
 		}
 
+		// 导出 HTML
+		htmlPath := filepath.Join(outDir, "graph.html")
+		if err := export.ExportSystemGraphHTML(g, htmlPath); err != nil {
+			fmt.Printf("⚠️ Skipped HTML export: %v\n", err)
+		}
+
 		mdPath := filepath.Join(outDir, "system-graph.md")
 		err = os.WriteFile(mdPath, []byte(mdSummary), 0644)
 		if err != nil {
@@ -86,6 +92,7 @@ func main() {
 		fmt.Println("\n-----------------------------------------")
 		fmt.Printf("💾 Reports saved to: %s\n", outDir)
 		fmt.Println("  📄 graph.json")
+		fmt.Println("  🌐 graph.html")
 		fmt.Println("  📝 system-graph.md")
 	} else {
 		fmt.Println("\n-----------------------------------------")

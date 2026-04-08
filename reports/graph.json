@@ -1,0 +1,2465 @@
+{
+  "nodes": [
+    {
+      "id": "entity_unixnano",
+      "label": "UnixNano()",
+      "type": "function",
+      "community": 1,
+      "source_file": ""
+    },
+    {
+      "id": "entity_modularize",
+      "label": "Modularize()",
+      "type": "function",
+      "community": 1,
+      "source_file": ""
+    },
+    {
+      "id": "entity_htmlstyles",
+      "label": "htmlStyles()",
+      "type": "function",
+      "community": 5,
+      "source_file": "D:\\github\\graphify-go\\internal\\export\\html.go"
+    },
+    {
+      "id": "entity_compileignorelines",
+      "label": "CompileIgnoreLines()",
+      "type": "function",
+      "community": 4,
+      "source_file": ""
+    },
+    {
+      "id": "entity_on",
+      "label": "on()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_hasedgebetween",
+      "label": "HasEdgeBetween()",
+      "type": "function",
+      "community": 1,
+      "source_file": ""
+    },
+    {
+      "id": "entity_processfile",
+      "label": ".processFile()",
+      "type": "method",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\builder.go"
+    },
+    {
+      "id": "entity_tojson",
+      "label": ".ToJSON()",
+      "type": "method",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\graph.go"
+    },
+    {
+      "id": "entity_slice",
+      "label": "Slice()",
+      "type": "function",
+      "community": 6,
+      "source_file": ""
+    },
+    {
+      "id": "entity_exportsystemgraphmd",
+      "label": "ExportSystemGraphMD()",
+      "type": "function",
+      "community": 5,
+      "source_file": "D:\\github\\graphify-go\\internal\\export\\markdown.go"
+    },
+    {
+      "id": "entity_writestring",
+      "label": "WriteString()",
+      "type": "function",
+      "community": 5,
+      "source_file": ""
+    },
+    {
+      "id": "entity_rel",
+      "label": "Rel()",
+      "type": "function",
+      "community": 4,
+      "source_file": ""
+    },
+    {
+      "id": "entity_unlink",
+      "label": "unlink()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_setlanguage",
+      "label": "SetLanguage()",
+      "type": "function",
+      "community": 2,
+      "source_file": ""
+    },
+    {
+      "id": "file_html_go",
+      "label": "html.go",
+      "type": "file",
+      "community": 5,
+      "source_file": "D:\\github\\graphify-go\\internal\\export\\html.go"
+    },
+    {
+      "id": "entity_communities",
+      "label": "Communities()",
+      "type": "function",
+      "community": 1,
+      "source_file": ""
+    },
+    {
+      "id": "entity_addedge",
+      "label": "AddEdge()",
+      "type": "function",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\graph.go"
+    },
+    {
+      "id": "file_registry_go",
+      "label": "registry.go",
+      "type": "file",
+      "community": 2,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\registry.go"
+    },
+    {
+      "id": "file_graph_test_go",
+      "label": "graph_test.go",
+      "type": "file",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\graph_test.go"
+    },
+    {
+      "id": "entity_newbuilder",
+      "label": "NewBuilder()",
+      "type": "function",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\builder.go"
+    },
+    {
+      "id": "file_worker_go",
+      "label": "worker.go",
+      "type": "file",
+      "community": 7,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\worker.go"
+    },
+    {
+      "id": "file_index_js",
+      "label": "index.js",
+      "type": "file",
+      "community": 0,
+      "source_file": "D:\\github\\graphify-go\\index.js"
+    },
+    {
+      "id": "file_install_js",
+      "label": "install.js",
+      "type": "file",
+      "community": 0,
+      "source_file": "D:\\github\\graphify-go\\scripts\\install.js"
+    },
+    {
+      "id": "entity_existssync",
+      "label": "existsSync()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_godnodes",
+      "label": "GodNodes()",
+      "type": "function",
+      "community": 6,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\analyze.go"
+    },
+    {
+      "id": "entity_append",
+      "label": "append()",
+      "type": "function",
+      "community": 9,
+      "source_file": ""
+    },
+    {
+      "id": "entity_mustcompile",
+      "label": "MustCompile()",
+      "type": "function",
+      "community": 3,
+      "source_file": ""
+    },
+    {
+      "id": "entity_vislegend",
+      "label": "visLegend",
+      "type": "class",
+      "community": 5,
+      "source_file": "D:\\github\\graphify-go\\internal\\export\\html.go"
+    },
+    {
+      "id": "entity_downloadbinary",
+      "label": "downloadBinary()",
+      "type": "function",
+      "community": 0,
+      "source_file": "D:\\github\\graphify-go\\scripts\\install.js"
+    },
+    {
+      "id": "entity_detectcommunities",
+      "label": "DetectCommunities()",
+      "type": "function",
+      "community": 1,
+      "source_file": "D:\\github\\graphify-go\\internal\\cluster\\cluster.go"
+    },
+    {
+      "id": "entity_detectlanguage",
+      "label": "DetectLanguage()",
+      "type": "function",
+      "community": 2,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\registry.go"
+    },
+    {
+      "id": "entity_newquerycursor",
+      "label": "NewQueryCursor()",
+      "type": "function",
+      "community": 9,
+      "source_file": ""
+    },
+    {
+      "id": "entity_main",
+      "label": "main()",
+      "type": "function",
+      "community": 10,
+      "source_file": "D:\\github\\graphify-go\\cmd\\graphify\\main.go"
+    },
+    {
+      "id": "file_builder_test_go",
+      "label": "builder_test.go",
+      "type": "file",
+      "community": 7,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\builder_test.go"
+    },
+    {
+      "id": "entity_done",
+      "label": "Done()",
+      "type": "function",
+      "community": 7,
+      "source_file": ""
+    },
+    {
+      "id": "entity_get",
+      "label": "get()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_isconceptnode",
+      "label": ".isConceptNode()",
+      "type": "method",
+      "community": 6,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\analyze.go"
+    },
+    {
+      "id": "entity_errorf",
+      "label": "Errorf()",
+      "type": "function",
+      "community": 7,
+      "source_file": ""
+    },
+    {
+      "id": "entity_newpcg",
+      "label": "NewPCG()",
+      "type": "function",
+      "community": 1,
+      "source_file": ""
+    },
+    {
+      "id": "file_extractor_go",
+      "label": "extractor.go",
+      "type": "file",
+      "community": 9,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\extractor.go"
+    },
+    {
+      "id": "entity_getparser",
+      "label": "GetParser()",
+      "type": "function",
+      "community": 2,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\registry.go"
+    },
+    {
+      "id": "file_queries_go",
+      "label": "queries.go",
+      "type": "file",
+      "community": 8,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\queries.go"
+    },
+    {
+      "id": "entity_newgraph",
+      "label": "NewGraph()",
+      "type": "function",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\graph.go"
+    },
+    {
+      "id": "entity_visnodecolor",
+      "label": "visNodeColor",
+      "type": "class",
+      "community": 5,
+      "source_file": "D:\\github\\graphify-go\\internal\\export\\html.go"
+    },
+    {
+      "id": "file_cluster_go",
+      "label": "cluster.go",
+      "type": "file",
+      "community": 1,
+      "source_file": "D:\\github\\graphify-go\\internal\\cluster\\cluster.go"
+    },
+    {
+      "id": "entity_trim",
+      "label": "Trim()",
+      "type": "function",
+      "community": 3,
+      "source_file": ""
+    },
+    {
+      "id": "file_graph_go",
+      "label": "graph.go",
+      "type": "file",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\graph.go"
+    },
+    {
+      "id": "entity_mkdirall",
+      "label": "MkdirAll()",
+      "type": "function",
+      "community": 10,
+      "source_file": ""
+    },
+    {
+      "id": "entity_compileignorefile",
+      "label": "CompileIgnoreFile()",
+      "type": "function",
+      "community": 4,
+      "source_file": ""
+    },
+    {
+      "id": "entity_getdownloadurl",
+      "label": "getDownloadUrl()",
+      "type": "function",
+      "community": 0,
+      "source_file": "D:\\github\\graphify-go\\scripts\\install.js"
+    },
+    {
+      "id": "entity_chmodsync",
+      "label": "chmodSync()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_newextractor",
+      "label": "NewExtractor()",
+      "type": "function",
+      "community": 7,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\extractor.go"
+    },
+    {
+      "id": "entity_parseandextract",
+      "label": ".ParseAndExtract()",
+      "type": "method",
+      "community": 7,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\extractor.go"
+    },
+    {
+      "id": "entity_edge",
+      "label": "Edge",
+      "type": "class",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\graph.go"
+    },
+    {
+      "id": "entity_languagetype",
+      "label": "LanguageType",
+      "type": "class",
+      "community": 2,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\registry.go"
+    },
+    {
+      "id": "entity_getlanguage",
+      "label": "GetLanguage()",
+      "type": "function",
+      "community": 2,
+      "source_file": ""
+    },
+    {
+      "id": "entity_abs",
+      "label": "Abs()",
+      "type": "function",
+      "community": 10,
+      "source_file": ""
+    },
+    {
+      "id": "entity_analyzer",
+      "label": "Analyzer",
+      "type": "class",
+      "community": 6,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\analyze.go"
+    },
+    {
+      "id": "entity_processworkspace",
+      "label": "ProcessWorkspace()",
+      "type": "function",
+      "community": 10,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\worker.go"
+    },
+    {
+      "id": "entity_exportsystemgraphhtml",
+      "label": "ExportSystemGraphHTML()",
+      "type": "function",
+      "community": 5,
+      "source_file": "D:\\github\\graphify-go\\internal\\export\\html.go"
+    },
+    {
+      "id": "entity_scanner",
+      "label": "Scanner",
+      "type": "class",
+      "community": 4,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\scanner.go"
+    },
+    {
+      "id": "entity_setweightededge",
+      "label": "SetWeightedEdge()",
+      "type": "function",
+      "community": 1,
+      "source_file": ""
+    },
+    {
+      "id": "entity_wait",
+      "label": "Wait()",
+      "type": "function",
+      "community": 7,
+      "source_file": ""
+    },
+    {
+      "id": "entity_matchespath",
+      "label": "MatchesPath()",
+      "type": "function",
+      "community": 4,
+      "source_file": ""
+    },
+    {
+      "id": "entity_isdir",
+      "label": "IsDir()",
+      "type": "function",
+      "community": 4,
+      "source_file": ""
+    },
+    {
+      "id": "entity_background",
+      "label": "Background()",
+      "type": "function",
+      "community": 9,
+      "source_file": ""
+    },
+    {
+      "id": "file_markdown_go",
+      "label": "markdown.go",
+      "type": "file",
+      "community": 5,
+      "source_file": "D:\\github\\graphify-go\\internal\\export\\markdown.go"
+    },
+    {
+      "id": "entity_len",
+      "label": "len()",
+      "type": "function",
+      "community": 7,
+      "source_file": ""
+    },
+    {
+      "id": "entity_weight",
+      "label": "Weight()",
+      "type": "function",
+      "community": 1,
+      "source_file": ""
+    },
+    {
+      "id": "entity_uint64",
+      "label": "uint64()",
+      "type": "function",
+      "community": 1,
+      "source_file": ""
+    },
+    {
+      "id": "entity_println",
+      "label": "Println()",
+      "type": "function",
+      "community": 10,
+      "source_file": ""
+    },
+    {
+      "id": "file_extractor_test_go",
+      "label": "extractor_test.go",
+      "type": "file",
+      "community": 7,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\extractor_test.go"
+    },
+    {
+      "id": "entity_make",
+      "label": "make()",
+      "type": "function",
+      "community": 3,
+      "source_file": ""
+    },
+    {
+      "id": "entity_rootnode",
+      "label": "RootNode()",
+      "type": "function",
+      "community": 9,
+      "source_file": ""
+    },
+    {
+      "id": "entity_newscanner",
+      "label": "NewScanner()",
+      "type": "function",
+      "community": 4,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\scanner.go"
+    },
+    {
+      "id": "entity_since",
+      "label": "Since()",
+      "type": "function",
+      "community": 10,
+      "source_file": ""
+    },
+    {
+      "id": "entity_isnotexist",
+      "label": "IsNotExist()",
+      "type": "function",
+      "community": 4,
+      "source_file": ""
+    },
+    {
+      "id": "entity_capturenameforid",
+      "label": "CaptureNameForId()",
+      "type": "function",
+      "community": 9,
+      "source_file": ""
+    },
+    {
+      "id": "entity_visedge",
+      "label": "visEdge",
+      "type": "class",
+      "community": 5,
+      "source_file": "D:\\github\\graphify-go\\internal\\export\\html.go"
+    },
+    {
+      "id": "entity_ext",
+      "label": "Ext()",
+      "type": "function",
+      "community": 2,
+      "source_file": ""
+    },
+    {
+      "id": "entity_execfile",
+      "label": "execFile()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_resolve",
+      "label": "resolve()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_error",
+      "label": "error()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_newquery",
+      "label": "NewQuery()",
+      "type": "function",
+      "community": 9,
+      "source_file": ""
+    },
+    {
+      "id": "entity_godnoderesult",
+      "label": "GodNodeResult",
+      "type": "class",
+      "community": 6,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\analyze.go"
+    },
+    {
+      "id": "entity_id",
+      "label": "ID()",
+      "type": "function",
+      "community": 1,
+      "source_file": ""
+    },
+    {
+      "id": "entity_close",
+      "label": "Close()",
+      "type": "function",
+      "community": 9,
+      "source_file": ""
+    },
+    {
+      "id": "entity_string",
+      "label": "String()",
+      "type": "function",
+      "community": 5,
+      "source_file": ""
+    },
+    {
+      "id": "file_analyze_go",
+      "label": "analyze.go",
+      "type": "file",
+      "community": 6,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\analyze.go"
+    },
+    {
+      "id": "entity_nextmatch",
+      "label": "NextMatch()",
+      "type": "function",
+      "community": 9,
+      "source_file": ""
+    },
+    {
+      "id": "entity_newparser",
+      "label": "NewParser()",
+      "type": "function",
+      "community": 2,
+      "source_file": ""
+    },
+    {
+      "id": "entity_isfilenode",
+      "label": ".isFileNode()",
+      "type": "method",
+      "community": 6,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\analyze.go"
+    },
+    {
+      "id": "entity_hasprefix",
+      "label": "HasPrefix()",
+      "type": "function",
+      "community": 6,
+      "source_file": ""
+    },
+    {
+      "id": "entity_parsectx",
+      "label": "ParseCtx()",
+      "type": "function",
+      "community": 9,
+      "source_file": ""
+    },
+    {
+      "id": "entity_tolower",
+      "label": "ToLower()",
+      "type": "function",
+      "community": 2,
+      "source_file": ""
+    },
+    {
+      "id": "entity_float64",
+      "label": "float64()",
+      "type": "function",
+      "community": 5,
+      "source_file": ""
+    },
+    {
+      "id": "entity_testextractor_parseandextract_javascript",
+      "label": "TestExtractor_ParseAndExtract_JavaScript()",
+      "type": "function",
+      "community": 7,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\extractor_test.go"
+    },
+    {
+      "id": "entity_join",
+      "label": "Join()",
+      "type": "function",
+      "community": 10,
+      "source_file": ""
+    },
+    {
+      "id": "file_main_go",
+      "label": "main.go",
+      "type": "file",
+      "community": 10,
+      "source_file": "D:\\github\\graphify-go\\cmd\\graphify\\main.go"
+    },
+    {
+      "id": "entity_parse",
+      "label": "Parse()",
+      "type": "function",
+      "community": 10,
+      "source_file": ""
+    },
+    {
+      "id": "entity_testnodeidgeneration",
+      "label": "TestNodeIDGeneration()",
+      "type": "function",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\graph_test.go"
+    },
+    {
+      "id": "entity_surprisingconnections",
+      "label": "SurprisingConnections()",
+      "type": "function",
+      "community": 6,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\analyze.go"
+    },
+    {
+      "id": "entity_sprintf",
+      "label": "Sprintf()",
+      "type": "function",
+      "community": 5,
+      "source_file": ""
+    },
+    {
+      "id": "entity_base",
+      "label": "Base()",
+      "type": "function",
+      "community": 6,
+      "source_file": ""
+    },
+    {
+      "id": "entity_build",
+      "label": ".Build()",
+      "type": "method",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\builder.go"
+    },
+    {
+      "id": "entity_graph",
+      "label": "Graph",
+      "type": "class",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\graph.go"
+    },
+    {
+      "id": "entity_scan",
+      "label": "Scan()",
+      "type": "function",
+      "community": 4,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\scanner.go"
+    },
+    {
+      "id": "entity_visnodefont",
+      "label": "visNodeFont",
+      "type": "class",
+      "community": 5,
+      "source_file": "D:\\github\\graphify-go\\internal\\export\\html.go"
+    },
+    {
+      "id": "entity_generatenodeid",
+      "label": "GenerateNodeID()",
+      "type": "function",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\graph.go"
+    },
+    {
+      "id": "entity_newanalyzer",
+      "label": "NewAnalyzer()",
+      "type": "function",
+      "community": 6,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\analyze.go"
+    },
+    {
+      "id": "entity_writefile",
+      "label": "WriteFile()",
+      "type": "function",
+      "community": 10,
+      "source_file": ""
+    },
+    {
+      "id": "entity_graphify",
+      "label": "graphify()",
+      "type": "function",
+      "community": 0,
+      "source_file": "D:\\github\\graphify-go\\index.js"
+    },
+    {
+      "id": "entity_exit",
+      "label": "exit()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_log",
+      "label": "log()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_surprisingconnectionresult",
+      "label": "SurprisingConnectionResult",
+      "type": "class",
+      "community": 6,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\analyze.go"
+    },
+    {
+      "id": "entity_marshal",
+      "label": "Marshal()",
+      "type": "function",
+      "community": 5,
+      "source_file": ""
+    },
+    {
+      "id": "entity_require",
+      "label": "require()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_pipe",
+      "label": "pipe()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_degree",
+      "label": ".Degree()",
+      "type": "method",
+      "community": 6,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\analyze.go"
+    },
+    {
+      "id": "entity_addnode",
+      "label": "AddNode()",
+      "type": "function",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\graph.go"
+    },
+    {
+      "id": "entity_replaceallstring",
+      "label": "ReplaceAllString()",
+      "type": "function",
+      "community": 3,
+      "source_file": ""
+    },
+    {
+      "id": "entity_printf",
+      "label": "Printf()",
+      "type": "function",
+      "community": 10,
+      "source_file": ""
+    },
+    {
+      "id": "entity_stat",
+      "label": "Stat()",
+      "type": "function",
+      "community": 4,
+      "source_file": ""
+    },
+    {
+      "id": "entity_toslash",
+      "label": "ToSlash()",
+      "type": "function",
+      "community": 4,
+      "source_file": ""
+    },
+    {
+      "id": "entity_reject",
+      "label": "reject()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_hassuffix",
+      "label": "HasSuffix()",
+      "type": "function",
+      "community": 6,
+      "source_file": ""
+    },
+    {
+      "id": "entity_newweightedundirectedgraph",
+      "label": "NewWeightedUndirectedGraph()",
+      "type": "function",
+      "community": 1,
+      "source_file": ""
+    },
+    {
+      "id": "entity_extractor",
+      "label": "Extractor",
+      "type": "class",
+      "community": 9,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\extractor.go"
+    },
+    {
+      "id": "file_builder_go",
+      "label": "builder.go",
+      "type": "file",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\builder.go"
+    },
+    {
+      "id": "entity_marshalindent",
+      "label": "MarshalIndent()",
+      "type": "function",
+      "community": 3,
+      "source_file": ""
+    },
+    {
+      "id": "entity_newregistry",
+      "label": "NewRegistry()",
+      "type": "function",
+      "community": 7,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\registry.go"
+    },
+    {
+      "id": "file_scanner_go",
+      "label": "scanner.go",
+      "type": "file",
+      "community": 4,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\scanner.go"
+    },
+    {
+      "id": "entity_createwritestream",
+      "label": "createWriteStream()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_node",
+      "label": "Node()",
+      "type": "function",
+      "community": 1,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\graph.go"
+    },
+    {
+      "id": "entity_weightededge",
+      "label": "WeightedEdge()",
+      "type": "function",
+      "community": 1,
+      "source_file": ""
+    },
+    {
+      "id": "entity_builder",
+      "label": "Builder",
+      "type": "class",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\builder.go"
+    },
+    {
+      "id": "entity_add",
+      "label": "Add()",
+      "type": "function",
+      "community": 7,
+      "source_file": ""
+    },
+    {
+      "id": "entity_visnode",
+      "label": "visNode",
+      "type": "class",
+      "community": 5,
+      "source_file": "D:\\github\\graphify-go\\internal\\export\\html.go"
+    },
+    {
+      "id": "entity_mkdirsync",
+      "label": "mkdirSync()",
+      "type": "function",
+      "community": 0,
+      "source_file": ""
+    },
+    {
+      "id": "entity_exec",
+      "label": "Exec()",
+      "type": "function",
+      "community": 9,
+      "source_file": ""
+    },
+    {
+      "id": "entity_content",
+      "label": "Content()",
+      "type": "function",
+      "community": 9,
+      "source_file": ""
+    },
+    {
+      "id": "entity_testbuilder_buildandanalyze",
+      "label": "TestBuilder_BuildAndAnalyze()",
+      "type": "function",
+      "community": 7,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\builder_test.go"
+    },
+    {
+      "id": "entity_testextractor_parseandextract_go",
+      "label": "TestExtractor_ParseAndExtract_Go()",
+      "type": "function",
+      "community": 7,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\extractor_test.go"
+    },
+    {
+      "id": "entity_run",
+      "label": "Run()",
+      "type": "function",
+      "community": 3,
+      "source_file": ""
+    },
+    {
+      "id": "entity_now",
+      "label": "Now()",
+      "type": "function",
+      "community": 1,
+      "source_file": ""
+    },
+    {
+      "id": "entity_visedgecolor",
+      "label": "visEdgeColor",
+      "type": "class",
+      "community": 5,
+      "source_file": "D:\\github\\graphify-go\\internal\\export\\html.go"
+    },
+    {
+      "id": "entity_htmlscript",
+      "label": "htmlScript()",
+      "type": "function",
+      "community": 5,
+      "source_file": "D:\\github\\graphify-go\\internal\\export\\html.go"
+    },
+    {
+      "id": "entity_fatalf",
+      "label": "Fatalf()",
+      "type": "function",
+      "community": 10,
+      "source_file": ""
+    },
+    {
+      "id": "entity_contains",
+      "label": "Contains()",
+      "type": "function",
+      "community": 6,
+      "source_file": ""
+    },
+    {
+      "id": "entity_outputformat",
+      "label": "outputFormat",
+      "type": "class",
+      "community": 3,
+      "source_file": "D:\\github\\graphify-go\\internal\\graph\\graph.go"
+    },
+    {
+      "id": "entity_readfile",
+      "label": "ReadFile()",
+      "type": "function",
+      "community": 7,
+      "source_file": ""
+    },
+    {
+      "id": "entity_extracteddata",
+      "label": "ExtractedData",
+      "type": "class",
+      "community": 9,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\extractor.go"
+    },
+    {
+      "id": "entity_registry",
+      "label": "Registry",
+      "type": "class",
+      "community": 2,
+      "source_file": "D:\\github\\graphify-go\\internal\\parser\\registry.go"
+    },
+    {
+      "id": "entity_numcpu",
+      "label": "NumCPU()",
+      "type": "function",
+      "community": 7,
+      "source_file": ""
+    },
+    {
+      "id": "entity_walk",
+      "label": "Walk()",
+      "type": "function",
+      "community": 4,
+      "source_file": ""
+    }
+  ],
+  "links": [
+    {
+      "source": "file_analyze_go",
+      "target": "entity_make",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_append",
+      "weight": 5,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_printf",
+      "weight": 4,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_append",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_walk",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_isconceptnode",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_outputformat",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_marshalindent",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_exportsystemgraphmd",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_newscanner",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_matchespath",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_content",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_replaceallstring",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_scan",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_exportsystemgraphhtml",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_index_js",
+      "target": "entity_graphify",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_get",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_fatalf",
+      "weight": 5,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_parsectx",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_join",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_vislegend",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_extractor_test_go",
+      "target": "entity_newextractor",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_edge",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_len",
+      "weight": 4,
+      "type": "calls"
+    },
+    {
+      "source": "file_index_js",
+      "target": "entity_execfile",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_base",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_htmlscript",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_getdownloadurl",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_newregistry",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_make",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_test_go",
+      "target": "entity_len",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_index_js",
+      "target": "entity_resolve",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_require",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_mkdirsync",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_markdown_go",
+      "target": "entity_godnodes",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_markdown_go",
+      "target": "entity_string",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_addnode",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_len",
+      "weight": 7,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_append",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_id",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_visnodefont",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_htmlscript",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_test_go",
+      "target": "entity_len",
+      "weight": 7,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_done",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_error",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_getdownloadurl",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_go",
+      "target": "entity_addnode",
+      "weight": 6,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_writefile",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_scan",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_extractor_test_go",
+      "target": "entity_testextractor_parseandextract_javascript",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_extractor_test_go",
+      "target": "entity_errorf",
+      "weight": 8,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_newpcg",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_newquery",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_make",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_test_go",
+      "target": "entity_build",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_toslash",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_godnodes",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_registry_go",
+      "target": "entity_languagetype",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_newscanner",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_visnodecolor",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_builder_go",
+      "target": "entity_trim",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_mustcompile",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_visnode",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_sprintf",
+      "weight": 6,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_abs",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_len",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_modularize",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_registry_go",
+      "target": "entity_ext",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_base",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_communities",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_downloadbinary",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_append",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_registry_go",
+      "target": "entity_detectlanguage",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_hasprefix",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_newextractor",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_close",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_len",
+      "weight": 7,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_test_go",
+      "target": "entity_newanalyzer",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_stat",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_index_js",
+      "target": "entity_join",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_close",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_contains",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_test_go",
+      "target": "entity_fatalf",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_go",
+      "target": "entity_processfile",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_now",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_compileignorelines",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_pipe",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_test_go",
+      "target": "entity_errorf",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_newweightedundirectedgraph",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_graph",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_registry_go",
+      "target": "entity_newparser",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_test_go",
+      "target": "entity_testextractor_parseandextract_go",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_builder_go",
+      "target": "entity_base",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_errorf",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_isnotexist",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_hassuffix",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_weight",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_join",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_existssync",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_surprisingconnections",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_builder_go",
+      "target": "entity_hassuffix",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_on",
+      "weight": 4,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_generatenodeid",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_make",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_make",
+      "weight": 4,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_build",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_markdown_go",
+      "target": "entity_sprintf",
+      "weight": 7,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_test_go",
+      "target": "entity_testnodeidgeneration",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_index_js",
+      "target": "entity_require",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_downloadbinary",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_degree",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_graph_test_go",
+      "target": "entity_generatenodeid",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_newextractor",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_readfile",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_numcpu",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_writefile",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_markdown_go",
+      "target": "entity_join",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_isconceptnode",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_test_go",
+      "target": "entity_run",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_now",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_detectlanguage",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_exportsystemgraphhtml",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_godnoderesult",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_registry_go",
+      "target": "entity_errorf",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_wait",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_visedge",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_since",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_degree",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_tojson",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_sprintf",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_registry_go",
+      "target": "entity_getlanguage",
+      "weight": 4,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_processworkspace",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_join",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_capturenameforid",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_test_go",
+      "target": "entity_testbuilder_buildandanalyze",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_createwritestream",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_markdown_go",
+      "target": "entity_surprisingconnections",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_detectcommunities",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_setweightededge",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_extracteddata",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_isfilenode",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_addnode",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_node",
+      "weight": 5,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_parseandextract",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_builder_go",
+      "target": "entity_build",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_builder_test_go",
+      "target": "entity_newbuilder",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_test_go",
+      "target": "entity_errorf",
+      "weight": 4,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_analyzer",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_markdown_go",
+      "target": "entity_make",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_add",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_detectlanguage",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_slice",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_weightededge",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_go",
+      "target": "entity_newgraph",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_addedge",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_parseandextract",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_float64",
+      "weight": 4,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_make",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_compileignorefile",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_markdown_go",
+      "target": "entity_newanalyzer",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_newbuilder",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_hasedgebetween",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_println",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_printf",
+      "weight": 6,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_mkdirall",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_newanalyzer",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_len",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_errorf",
+      "weight": 4,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_getparser",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_visedgecolor",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_nextmatch",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_registry_go",
+      "target": "entity_registry",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_log",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_markdown_go",
+      "target": "entity_writestring",
+      "weight": 21,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_string",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_println",
+      "weight": 14,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_test_go",
+      "target": "entity_fatalf",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_unixnano",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_marshal",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_test_go",
+      "target": "entity_parseandextract",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_sprintf",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_join",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_cluster_go",
+      "target": "entity_uint64",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_go",
+      "target": "entity_processfile",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_len",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_index_js",
+      "target": "entity_reject",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_background",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_rootnode",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_tolower",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_chmodsync",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_unlink",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_isdir",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_extractor",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_registry_go",
+      "target": "entity_newregistry",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_string",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_parse",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_scanner",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_append",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_go",
+      "target": "entity_builder",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_extractor_test_go",
+      "target": "entity_newregistry",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_append",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_htmlstyles",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_node",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_builder_test_go",
+      "target": "entity_godnodes",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_go",
+      "target": "entity_newbuilder",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_exec",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_newgraph",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_registry_go",
+      "target": "entity_getparser",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_registry_go",
+      "target": "entity_setlanguage",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_worker_go",
+      "target": "entity_errorf",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_surprisingconnectionresult",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_builder_go",
+      "target": "entity_addedge",
+      "weight": 5,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_main",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_install_js",
+      "target": "entity_exit",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_markdown_go",
+      "target": "entity_exportsystemgraphmd",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_markdown_go",
+      "target": "entity_len",
+      "weight": 8,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_close",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_extractor_go",
+      "target": "entity_newquerycursor",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_go",
+      "target": "entity_generatenodeid",
+      "weight": 6,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_processworkspace",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_graph_go",
+      "target": "entity_trim",
+      "weight": 2,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_detectcommunities",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_main_go",
+      "target": "entity_tojson",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_analyze_go",
+      "target": "entity_isfilenode",
+      "weight": 1,
+      "type": "contains"
+    },
+    {
+      "source": "file_html_go",
+      "target": "entity_htmlstyles",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_builder_test_go",
+      "target": "entity_generatenodeid",
+      "weight": 3,
+      "type": "calls"
+    },
+    {
+      "source": "file_markdown_go",
+      "target": "entity_append",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_registry_go",
+      "target": "entity_tolower",
+      "weight": 1,
+      "type": "calls"
+    },
+    {
+      "source": "file_scanner_go",
+      "target": "entity_rel",
+      "weight": 1,
+      "type": "calls"
+    }
+  ]
+}

@@ -1,50 +1,58 @@
 # Graphify-Go 🚀
 
-**The blazing-fast, zero-dependency AST extractor and code relationship graph builder.**
+*[Read in English](./README.md) | [中文阅读](./README_zh.md)*
 
-A 1:1 Go rewrite of the original Python `graphify` engine, designed specifically to serve as the ultra-fast backend for [aictx-cli](https://github.com/kings2017/aictx-cli).
+**The blazing-fast, zero-dependency AST extraction and code architecture graph engine.**
 
-## 💡 Why Rewrite in Go?
+Designed for code analysis, refactoring assessment, and AI-assisted engineering scaffolding, providing ultimate parsing performance and a seamless cross-platform distribution experience.
 
-The original Python version of Graphify was powerful but suffered from critical distribution issues:
-- **Dependency Hell**: Required users to have Python 3.9+, pip, and complex libraries like `networkx` installed globally.
-- **Performance Bottlenecks**: Extracting ASTs from 100k+ lines of code projects using Python could take tens of seconds and consume significant memory.
-- **Integration Friction**: Node.js CLI tools calling Python scripts natively cross-platform is a nightmare.
+### 💡 Why Build Graphify-Go?
+
+In the field of code architecture analysis, traditional tools often face several critical flaws:
+- **Dependency Hell**: Many Python-based parsing tools require users to globally install Python 3.9+, pip, and deal with complex compilation errors from libraries like `networkx` and `leidenalg` (which rely on C++).
+- **Performance Bottlenecks**: When facing large-scale projects with hundreds of thousands of lines of code, traditional single-threaded scripts are limited by memory overhead, and AST extraction often takes tens of seconds or even minutes.
+- **Integration Friction**: For frontend CLI tools written in Node.js, calling external scripts (like Python or Java) cross-platform is a nightmare.
 
 **Graphify-Go solves all of this:**
-- **Zero Dependencies**: Compiled down to a single binary (`.exe`, ELF, Mach-O). No Python, no pip, no C-compilers required on the user's machine.
-- **Blazing Fast**: Powered by `tree-sitter` (via `go-tree-sitter`) and Go's native concurrency (goroutines). Extracts codebases 10x-50x faster.
-- **Drop-in Replacement**: Produces the exact same `graph.json` format as the Python version, ensuring 100% compatibility with the `aictx-cli` ecosystem.
+- **Zero Dependencies**: Compiled down to a single static binary (`.exe`, ELF, Mach-O). No Python, Node, JVM, or C-compilers required on the user's machine.
+- **Blazing Fast**: Powered by `tree-sitter` (via `go-tree-sitter`) and Go's native concurrency (goroutines). Extracts and builds the graph in milliseconds.
+- **Out of the Box**: Directly outputs standard `graph.json` architecture data, interactive `graph.html` visualization, and Markdown summaries, with built-in Louvain community detection. Frontend tools can integrate it with a single npm command.
 
-## 🏗️ Architecture Guardrails
+### ✨ Features
+- **Concurrent AST Extraction**: Scans workspaces and extracts `classes`, `functions`, `methods`, `calls`, and `imports` using Tree-sitter S-expressions.
+- **Graph Construction**: Automatically merges identical entities and accumulates edge weights based on call frequencies.
+- **Community Detection**: Built-in Louvain modularity algorithm to group highly cohesive code modules together.
+- **Architecture Insights**: Purifies "God Nodes" and discovers "Surprising Connections" across different modules.
 
-We adhere strictly to the following principles:
+### 🛠️ Supported Languages (Tree-sitter)
+- [x] JavaScript / TypeScript
+- [x] Python
+- [x] Go
+- [ ] *Coming soon (Java, C, C++, Ruby, C#, Kotlin, Scala, PHP, Swift)*
 
-1. **Strict Output Compatibility**: The JSON output and Markdown reports must be pixel-perfect identical to the Python version.
-2. **Static Linking Only**: All C-code (tree-sitter parsers) must be statically linked via `cgo`. The final binary must be entirely standalone.
-3. **IPC via File System / Stdout**: No complex gRPC/HTTP overhead. The engine runs as a hidden subprocess, takes CLI arguments, and outputs standard JSON to the file system.
+### 🚀 Usage
 
-## 🛠️ Supported Languages (Tree-sitter Parsers)
+You can download the pre-compiled binaries from the [Releases](https://github.com/ian000/graphify-go/releases) page, or install via npm wrapper:
 
-Phase 1 MVP targets:
-- [ ] JavaScript / TypeScript
-- [ ] Python
-- [ ] Go
-- [ ] Rust
-- [ ] Java
-- [ ] C / C++
-
-## 🚀 Development
-
-### Prerequisites
-- Go 1.21+
-- GCC (for cgo compilation of tree-sitter)
-
-### Setup
 ```bash
-git clone https://github.com/kings2017/graphify-go.git
+npm install graphify-go
+```
+
+Run the CLI directly:
+```bash
+# Analyze the current directory
+graphify-go
+
+# Analyze a specific directory and save reports
+graphify-go -dir ./my-project -out ./reports
+```
+
+### 💻 Development
+```bash
+git clone https://github.com/ian000/graphify-go.git
 cd graphify-go
-go mod download
+# Requires GCC for cgo compilation of tree-sitter
+go build ./cmd/graphify
 ```
 
 ## 📄 License
