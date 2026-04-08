@@ -185,6 +185,8 @@
   },
   "active": "6647018b11d27bc0",
   "lastOpenFiles": [
+    "README.md",
+    "README_zh.md",
     "bin/graphify.exe",
     "bin",
     "reports/system-graph.md",
@@ -192,13 +194,10 @@
     "reports/graph.html",
     "reports",
     "internal/export/html.go",
-    "README.md",
-    "README_zh.md",
     "internal/graph/builder_test.go",
     "internal/parser/extractor_test.go",
     "scripts/install.js",
     "scripts",
-    "index.js",
     "documents/architecture/graphify-go-Architecture.md",
     "documents/product/graphify-go-PRD.md"
   ]
