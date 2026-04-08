@@ -4,7 +4,7 @@
   "description": "Zero-dependency, pure local AST extraction & graph architecture engine powered by Go and Tree-sitter.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node scripts/install.js"
+    "postinstall": "node scripts/install.js || echo 'Install script failed, please download binary manually'"
   },
   "repository": {
     "type": "git",

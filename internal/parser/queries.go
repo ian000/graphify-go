@@ -3,8 +3,8 @@ package parser
 // JSQuery 是针对 JavaScript/TypeScript 的 Tree-sitter 查询语句
 // 注意：Tree-sitter Query 语言中的注释使用分号 (;)
 const JSQuery = `
-; 1. 捕获类的声明
-(class_declaration name: (identifier) @class.name)
+; 1. 捕获类的声明 (TS 和 JS 中都用 class_declaration，但类名节点类型不同，TS 中可能是 type_identifier)
+(class_declaration name: (_) @class.name)
 
 ; 2. 捕获函数的声明
 (function_declaration name: (identifier) @function.name)

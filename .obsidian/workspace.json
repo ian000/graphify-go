@@ -185,6 +185,8 @@
   },
   "active": "6647018b11d27bc0",
   "lastOpenFiles": [
+    "bin/graphify.exe",
+    "bin",
     "reports/system-graph.md",
     "reports/graph.json",
     "reports/graph.html",
@@ -197,7 +199,6 @@
     "scripts/install.js",
     "scripts",
     "index.js",
-    "package.json",
     "documents/architecture/graphify-go-Architecture.md",
     "documents/product/graphify-go-PRD.md"
   ]
