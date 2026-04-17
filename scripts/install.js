@@ -2,7 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 
-const VERSION = "v1.0.0"; // 这里对应 GitHub Release Tag
+const pkg = require("../package.json");
+const VERSION_CANDIDATES = [`v${pkg.version}`, "v1.0.0"];
 const REPO = "ian000/graphify-go";
 
 const platformMap = {
@@ -16,7 +17,7 @@ const archMap = {
   arm64: "arm64",
 };
 
-function getDownloadUrl() {
+function getDownloadUrl(versionTag) {
   const platform = platformMap[process.platform];
   const arch = archMap[process.arch];
 
@@ -30,11 +31,49 @@ function getDownloadUrl() {
     assetName += ".exe";
   }
 
-  return `https://github.com/${REPO}/releases/download/${VERSION}/${assetName}`;
+  return `https://github.com/${REPO}/releases/download/${versionTag}/${assetName}`;
 }
 
-function downloadBinary() {
-  const url = getDownloadUrl();
+function downloadToFile(url, binPath, isWindows) {
+  return new Promise((resolve, reject) => {
+    const file = fs.createWriteStream(binPath);
+
+    const onError = (err) => {
+      fs.unlink(binPath, () => {});
+      reject(err);
+    };
+
+    const request = (currentUrl) => {
+      https
+        .get(currentUrl, (response) => {
+          if (response.statusCode === 301 || response.statusCode === 302) {
+            request(response.headers.location);
+            return;
+          }
+
+          if (response.statusCode !== 200) {
+            reject(new Error(`Unexpected status code ${response.statusCode}`));
+            return;
+          }
+
+          response.pipe(file);
+          file.on("finish", () => {
+            file.close();
+            if (!isWindows) {
+              fs.chmodSync(binPath, "755");
+            }
+            resolve();
+          });
+        })
+        .on("error", onError);
+    };
+
+    request(url);
+    file.on("error", onError);
+  });
+}
+
+async function downloadBinary() {
   const binDir = path.join(__dirname, "..", "bin");
   const isWindows = process.platform === "win32";
   const binaryName = isWindows ? "graphify.exe" : "graphify";
@@ -44,42 +83,20 @@ function downloadBinary() {
     fs.mkdirSync(binDir, { recursive: true });
   }
 
-  console.log(`⬇️ Downloading Graphify-Go binary from ${url}...`);
-
-  const file = fs.createWriteStream(binPath);
-
-  // 简单的下载逻辑（不处理 302 重定向等复杂场景，建议真实场景引入 axios/got 或 follow-redirects）
-  https.get(url, (response) => {
-    if (response.statusCode === 302 || response.statusCode === 301) {
-      https.get(response.headers.location, (res) => {
-        res.pipe(file);
-        file.on("finish", () => {
-          file.close();
-          if (!isWindows) {
-            fs.chmodSync(binPath, "755");
-          }
-          console.log(`✅ Successfully downloaded to ${binPath}`);
-        });
-      }).on("error", (err) => {
-        fs.unlink(binPath, () => {});
-        console.error(`❌ Download failed: ${err.message}`);
-        process.exit(1);
-      });
-    } else {
-      response.pipe(file);
-      file.on("finish", () => {
-        file.close();
-        if (!isWindows) {
-          fs.chmodSync(binPath, "755");
-        }
-        console.log(`✅ Successfully downloaded to ${binPath}`);
-      });
+  for (const versionTag of VERSION_CANDIDATES) {
+    const url = getDownloadUrl(versionTag);
+    console.log(`⬇️ Downloading Graphify-Go binary from ${url}...`);
+    try {
+      await downloadToFile(url, binPath, isWindows);
+      console.log(`✅ Successfully downloaded to ${binPath}`);
+      return;
+    } catch (err) {
+      console.warn(`⚠️ Download failed for ${versionTag}: ${err.message}`);
     }
-  }).on("error", (err) => {
-    fs.unlink(binPath, () => {});
-    console.error(`❌ Download failed: ${err.message}`);
-    process.exit(1);
-  });
+  }
+
+  console.error("❌ Download failed for all candidate release tags.");
+  process.exit(1);
 }
 
 downloadBinary();

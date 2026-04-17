@@ -35,7 +35,7 @@
 你可以直接从 [Releases](https://github.com/ian000/graphify-go/releases) 页面下载编译好的二进制文件，或者通过 npm 包装器一键安装：
 
 ```bash
-npm install graphify-go
+npm install -g graphify-go
 ```
 
 直接运行 CLI 命令：

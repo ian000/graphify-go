@@ -35,7 +35,7 @@ In the field of code architecture analysis, traditional tools often face several
 You can download the pre-compiled binaries from the [Releases](https://github.com/ian000/graphify-go/releases) page, or install via npm wrapper:
 
 ```bash
-npm install graphify-go
+npm install -g graphify-go
 ```
 
 Run the CLI directly:
