@@ -50,8 +50,10 @@ func (e *Extractor) ParseAndExtract(filePath string, sourceCode []byte) (*Extrac
 	// 4. 准备 Query
 	var queryStr string
 	switch lang {
-	case LangJavaScript, LangTypeScript:
+	case LangJavaScript:
 		queryStr = JSQuery
+	case LangTypeScript:
+		queryStr = TSQuery
 	case LangPython:
 		queryStr = PYQuery
 	case LangGo:

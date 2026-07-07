@@ -59,6 +59,77 @@ func TestExtractor_ParseAndExtract_JavaScript(t *testing.T) {
 	}
 }
 
+func TestExtractor_ParseAndExtract_TypeScript(t *testing.T) {
+	registry := parser.NewRegistry()
+	extractor := parser.NewExtractor(registry)
+
+	tsCode := []byte(`
+		import type { Config } from './types';
+
+		interface Runner {
+			run(): void;
+		}
+
+		enum Mode {
+			Fast = "fast",
+		}
+
+		class MyService implements Runner {
+			run() {
+				helper();
+			}
+		}
+
+		function helper() {
+			return new MyService();
+		}
+	`)
+
+	data, err := extractor.ParseAndExtract("test.ts", tsCode)
+	if err != nil {
+		t.Fatalf("ParseAndExtract failed: %v", err)
+	}
+
+	if len(data.Classes) != 3 {
+		t.Fatalf("Expected 3 abstract declarations, got %v", data.Classes)
+	}
+
+	expectedClasses := map[string]bool{
+		"Runner":    false,
+		"Mode":      false,
+		"MyService": false,
+	}
+	for _, className := range data.Classes {
+		if _, ok := expectedClasses[className]; ok {
+			expectedClasses[className] = true
+		}
+	}
+	for className, found := range expectedClasses {
+		if !found {
+			t.Errorf("Expected declaration %q to be captured, got %v", className, data.Classes)
+		}
+	}
+
+	if len(data.Funcs) != 1 || data.Funcs[0] != "helper" {
+		t.Errorf("Expected 1 function 'helper', got %v", data.Funcs)
+	}
+
+	foundRun := false
+	for _, m := range data.Methods {
+		if m == "run" {
+			foundRun = true
+			break
+		}
+	}
+	if !foundRun {
+		t.Errorf("Expected method 'run' to be captured, got %v", data.Methods)
+	}
+
+	if len(data.Imports) != 1 || data.Imports[0] != "'./types'" {
+		t.Errorf("Expected import './types', got %v", data.Imports)
+	}
+}
+
 func TestExtractor_ParseAndExtract_Go(t *testing.T) {
 	registry := parser.NewRegistry()
 	extractor := parser.NewExtractor(registry)

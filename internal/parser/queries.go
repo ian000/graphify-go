@@ -1,10 +1,10 @@
 package parser
 
-// JSQuery 是针对 JavaScript/TypeScript 的 Tree-sitter 查询语句
+// JSQuery 是针对 JavaScript 的 Tree-sitter 查询语句
 // 注意：Tree-sitter Query 语言中的注释使用分号 (;)
 const JSQuery = `
-; 1. 捕获类的声明 (TS 和 JS 中都用 class_declaration，但类名节点类型不同，TS 中可能是 type_identifier)
-(class_declaration name: (_) @class.name)
+; 1. 捕获类的声明
+(class_declaration name: (identifier) @class.name)
 
 ; 2. 捕获函数的声明
 (function_declaration name: (identifier) @function.name)
@@ -20,6 +20,33 @@ const JSQuery = `
   ])
 
 ; 5. 捕获导入依赖
+(import_statement source: (string) @import.source)
+`
+
+// TSQuery 是针对 TypeScript 的 Tree-sitter 查询语句
+const TSQuery = `
+; 1. 捕获类的声明
+(class_declaration name: (type_identifier) @class.name)
+
+; 2. 捕获常见类型声明，统一映射到抽象实体
+(interface_declaration name: (type_identifier) @class.name)
+(type_alias_declaration name: (type_identifier) @class.name)
+(enum_declaration name: (identifier) @class.name)
+
+; 3. 捕获函数的声明
+(function_declaration name: (identifier) @function.name)
+
+; 4. 捕获类里面的方法定义
+(method_definition name: (property_identifier) @method.name)
+
+; 5. 捕获函数调用
+(call_expression
+  function: [
+    (identifier) @call.function
+    (member_expression property: (property_identifier) @call.method)
+  ])
+
+; 6. 捕获导入依赖
 (import_statement source: (string) @import.source)
 `
 
