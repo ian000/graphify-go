@@ -3,7 +3,7 @@ const path = require("path");
 const https = require("https");
 
 const pkg = require("../package.json");
-const VERSION_CANDIDATES = [`v${pkg.version}`, "v1.0.0"];
+const VERSION_CANDIDATES = [`v${pkg.version}`];
 const REPO = "ian000/graphify-go";
 
 const platformMap = {

@@ -3,105 +3,200 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io"
 	"log"
 	"os"
 	"path/filepath"
+	"strings"
 	"time"
 
-	"github.com/kings2017/graphify-go/internal/cluster"
-	"github.com/kings2017/graphify-go/internal/export"
-	"github.com/kings2017/graphify-go/internal/graph"
-	"github.com/kings2017/graphify-go/internal/parser"
+	"github.com/ian000/graphify-go/internal/cluster"
+	"github.com/ian000/graphify-go/internal/export"
+	"github.com/ian000/graphify-go/internal/graph"
+	"github.com/ian000/graphify-go/internal/parser"
 )
 
 func main() {
-	// 1. 定义命令行参数
-	dirPtr := flag.String("dir", ".", "Directory to analyze (default: current directory)")
-	outPtr := flag.String("out", "", "Output directory for JSON and Markdown reports")
-	flag.Parse()
+	if err := run(os.Args[1:]); err != nil {
+		log.Fatal(err)
+	}
+}
 
-	workspace, err := filepath.Abs(*dirPtr)
-	if err != nil {
-		log.Fatalf("Invalid directory path: %v\n", err)
+func run(args []string) error {
+	if len(args) > 0 && !strings.HasPrefix(args[0], "-") {
+		switch args[0] {
+		case "analyze":
+			return runAnalyze(args[1:])
+		case "print":
+			return runPrint(args[1:])
+		}
 	}
 
-	fmt.Println("🚀 Graphify-Go Scanner Starting 🚀")
-	fmt.Printf("📂 Target Directory: %s\n", workspace)
-	fmt.Println("-----------------------------------------")
+	return runLegacy(args)
+}
+
+func runLegacy(args []string) error {
+	fs := flag.NewFlagSet("graphify-go", flag.ContinueOnError)
+	fs.SetOutput(io.Discard)
+
+	dirPtr := fs.String("dir", ".", "Directory to analyze (default: current directory)")
+	outPtr := fs.String("out", "", "Output directory for JSON and Markdown reports")
+	if err := fs.Parse(args); err != nil {
+		return err
+	}
+
+	return analyzeAndRender(*dirPtr, *outPtr, os.Stdout, os.Stderr)
+}
+
+func runAnalyze(args []string) error {
+	fs := flag.NewFlagSet("graphify-go analyze", flag.ContinueOnError)
+	fs.SetOutput(io.Discard)
+
+	dirPtr := fs.String("dir", ".", "Directory to analyze (default: current directory)")
+	outPtr := fs.String("out", "", "Output directory for JSON, HTML, and Markdown reports")
+	if err := fs.Parse(args); err != nil {
+		return err
+	}
+
+	return analyzeAndRender(*dirPtr, *outPtr, os.Stdout, os.Stderr)
+}
+
+func runPrint(args []string) error {
+	fs := flag.NewFlagSet("graphify-go print", flag.ContinueOnError)
+	fs.SetOutput(io.Discard)
+
+	dirPtr := fs.String("dir", ".", "Directory to analyze (default: current directory)")
+	formatPtr := fs.String("format", "markdown", "Output format: json or markdown")
+	if err := fs.Parse(args); err != nil {
+		return err
+	}
+
+	_, _, mdSummary, jsonBytes, err := analyzeWorkspace(*dirPtr, nil)
+	if err != nil {
+		return err
+	}
+
+	switch strings.ToLower(*formatPtr) {
+	case "json":
+		fmt.Fprint(os.Stdout, string(jsonBytes))
+	case "markdown", "md":
+		fmt.Fprint(os.Stdout, mdSummary)
+	default:
+		return fmt.Errorf("unsupported format %q, expected json or markdown", *formatPtr)
+	}
+
+	return nil
+}
+
+func analyzeAndRender(dir string, outDir string, stdout io.Writer, progress io.Writer) error {
+	workspace, g, mdSummary, jsonBytes, err := analyzeWorkspace(dir, progress)
+	if err != nil {
+		return err
+	}
+
+	if outDir != "" {
+		absOutDir, err := filepath.Abs(outDir)
+		if err != nil {
+			return fmt.Errorf("invalid output directory: %w", err)
+		}
+		if err := writeArtifacts(g, mdSummary, jsonBytes, absOutDir, progress); err != nil {
+			return err
+		}
+		return nil
+	}
+
+	if progress != nil {
+		fmt.Fprintln(progress, "\n-----------------------------------------")
+		fmt.Fprintln(progress, "📊 Analysis Summary")
+		fmt.Fprintln(progress, "-----------------------------------------")
+	}
+	fmt.Fprint(stdout, mdSummary)
+	if progress != nil {
+		fmt.Fprintln(progress, "-----------------------------------------")
+		fmt.Fprintf(progress, "✨ Done for %s\n", workspace)
+	}
+	return nil
+}
+
+func analyzeWorkspace(dir string, progress io.Writer) (string, *graph.Graph, string, []byte, error) {
+	workspace, err := filepath.Abs(dir)
+	if err != nil {
+		return "", nil, "", nil, fmt.Errorf("invalid directory path: %w", err)
+	}
+
+	if progress != nil {
+		fmt.Fprintln(progress, "🚀 Graphify-Go Scanner Starting 🚀")
+		fmt.Fprintf(progress, "📂 Target Directory: %s\n", workspace)
+		fmt.Fprintln(progress, "-----------------------------------------")
+	}
 
 	start := time.Now()
-
-	// 2. 触发并发工作池进行文件提取
-	results, err := parser.ProcessWorkspace(workspace)
+	results, err := parser.ProcessWorkspace(workspace, progress)
 	if err != nil {
-		log.Fatalf("❌ Failed to process workspace: %v\n", err)
+		return "", nil, "", nil, fmt.Errorf("failed to process workspace: %w", err)
 	}
 
 	if len(results) == 0 {
-		fmt.Println("⚠️ No supported source files found in the directory.")
-		return
+		return "", nil, "", nil, fmt.Errorf("no supported source files found in the directory")
 	}
 
-	// 3. 构建依赖图谱
-	fmt.Println("🏗️ Building Graph...")
+	if progress != nil {
+		fmt.Fprintln(progress, "🏗️ Building Graph...")
+	}
 	builder := graph.NewBuilder()
 	g := builder.Build(results)
-	fmt.Printf("✅ Graph built: %d Nodes, %d Edges\n", len(g.Nodes), len(g.Edges))
+	if progress != nil {
+		fmt.Fprintf(progress, "✅ Graph built: %d Nodes, %d Edges\n", len(g.Nodes), len(g.Edges))
+		fmt.Fprintln(progress, "🧠 Running Community Detection (Louvain)...")
+	}
 
-	// 4. 运行社区发现 (Louvain)
-	fmt.Println("🧠 Running Community Detection (Louvain)...")
 	cluster.DetectCommunities(g)
 
-	// 统计社区分布
-	commCount := make(map[int]int)
-	for _, n := range g.Nodes {
-		commCount[n.Community]++
+	if progress != nil {
+		commCount := make(map[int]int)
+		for _, n := range g.Nodes {
+			commCount[n.Community]++
+		}
+		fmt.Fprintf(progress, "✅ Discovered %d Communities.\n", len(commCount))
+		fmt.Fprintf(progress, "⏱️ Analysis completed in %v\n", time.Since(start))
 	}
-	fmt.Printf("✅ Discovered %d Communities.\n", len(commCount))
 
-	// 5. 输出分析与摘要 (Markdown & JSON)
 	mdSummary := export.ExportSystemGraphMD(g)
 	jsonBytes, err := g.ToJSON()
 	if err != nil {
-		log.Fatalf("❌ Failed to serialize graph to JSON: %v\n", err)
+		return "", nil, "", nil, fmt.Errorf("failed to serialize graph to JSON: %w", err)
 	}
 
-	// 如果指定了输出目录，则写入文件；否则仅在终端打印摘要
-	if *outPtr != "" {
-		outDir, _ := filepath.Abs(*outPtr)
-		os.MkdirAll(outDir, 0755)
+	return workspace, g, mdSummary, jsonBytes, nil
+}
 
-		jsonPath := filepath.Join(outDir, "graph.json")
-		err = os.WriteFile(jsonPath, jsonBytes, 0644)
-		if err != nil {
-			log.Fatalf("❌ Failed to write graph.json: %v\n", err)
-		}
-
-		// 导出 HTML
-		htmlPath := filepath.Join(outDir, "graph.html")
-		if err := export.ExportSystemGraphHTML(g, htmlPath); err != nil {
-			fmt.Printf("⚠️ Skipped HTML export: %v\n", err)
-		}
-
-		mdPath := filepath.Join(outDir, "system-graph.md")
-		err = os.WriteFile(mdPath, []byte(mdSummary), 0644)
-		if err != nil {
-			log.Fatalf("❌ Failed to write system-graph.md: %v\n", err)
-		}
-
-		fmt.Println("\n-----------------------------------------")
-		fmt.Printf("💾 Reports saved to: %s\n", outDir)
-		fmt.Println("  📄 graph.json")
-		fmt.Println("  🌐 graph.html")
-		fmt.Println("  📝 system-graph.md")
-	} else {
-		fmt.Println("\n-----------------------------------------")
-		fmt.Println("📊 Analysis Summary")
-		fmt.Println("-----------------------------------------")
-		fmt.Println(mdSummary)
+func writeArtifacts(g *graph.Graph, mdSummary string, jsonBytes []byte, outDir string, progress io.Writer) error {
+	if err := os.MkdirAll(outDir, 0755); err != nil {
+		return fmt.Errorf("failed to create output directory: %w", err)
 	}
 
-	elapsed := time.Since(start)
-	fmt.Println("-----------------------------------------")
-	fmt.Printf("✨ Done in %v\n", elapsed)
+	jsonPath := filepath.Join(outDir, "graph.json")
+	if err := os.WriteFile(jsonPath, jsonBytes, 0644); err != nil {
+		return fmt.Errorf("failed to write graph.json: %w", err)
+	}
+
+	htmlPath := filepath.Join(outDir, "graph.html")
+	if err := export.ExportSystemGraphHTML(g, htmlPath); err != nil && progress != nil {
+		fmt.Fprintf(progress, "⚠️ Skipped HTML export: %v\n", err)
+	}
+
+	mdPath := filepath.Join(outDir, "system-graph.md")
+	if err := os.WriteFile(mdPath, []byte(mdSummary), 0644); err != nil {
+		return fmt.Errorf("failed to write system-graph.md: %w", err)
+	}
+
+	if progress != nil {
+		fmt.Fprintln(progress, "\n-----------------------------------------")
+		fmt.Fprintf(progress, "💾 Reports saved to: %s\n", outDir)
+		fmt.Fprintln(progress, "  📄 graph.json")
+		fmt.Fprintln(progress, "  🌐 graph.html")
+		fmt.Fprintln(progress, "  📝 system-graph.md")
+	}
+
+	return nil
 }

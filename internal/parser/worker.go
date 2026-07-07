@@ -2,25 +2,26 @@ package parser
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
+	"os"
 	"runtime"
 	"sync"
 )
 
 // ProcessWorkspace 是我们的并发调度引擎
 // 它扫描目录，把所有文件丢进 Worker Pool 并发提取，然后收集所有结果
-func ProcessWorkspace(workspace string) ([]*ExtractedData, error) {
+func ProcessWorkspace(workspace string, progress io.Writer) ([]*ExtractedData, error) {
 	registry := NewRegistry()
 	scanner := NewScanner(workspace, registry)
 	extractor := NewExtractor(registry)
 
 	// 1. 扫描获取所有待处理的文件路径
-	fmt.Println("🔍 Scanning workspace for source files...")
+	logf(progress, "🔍 Scanning workspace for source files...\n")
 	files, err := scanner.Scan(workspace)
 	if err != nil {
 		return nil, fmt.Errorf("failed to scan workspace: %v", err)
 	}
-	fmt.Printf("✅ Found %d source files to process.\n", len(files))
+	logf(progress, "✅ Found %d source files to process.\n", len(files))
 
 	if len(files) == 0 {
 		return []*ExtractedData{}, nil
@@ -44,16 +45,16 @@ func ProcessWorkspace(workspace string) ([]*ExtractedData, error) {
 			defer wg.Done()
 			for filePath := range jobs {
 				// 读取文件内容
-				sourceCode, err := ioutil.ReadFile(filePath)
+				sourceCode, err := os.ReadFile(filePath)
 				if err != nil {
-					fmt.Printf("⚠️ Worker %d failed to read file %s: %v\n", workerID, filePath, err)
+					logf(progress, "⚠️ Worker %d failed to read file %s: %v\n", workerID, filePath, err)
 					continue
 				}
 
 				// 丢给我们的 AST 提取器
 				data, err := extractor.ParseAndExtract(filePath, sourceCode)
 				if err != nil {
-					fmt.Printf("⚠️ Worker %d failed to extract AST for %s: %v\n", workerID, filePath, err)
+					logf(progress, "⚠️ Worker %d failed to extract AST for %s: %v\n", workerID, filePath, err)
 					continue
 				}
 
@@ -81,6 +82,13 @@ func ProcessWorkspace(workspace string) ([]*ExtractedData, error) {
 		allData = append(allData, data)
 	}
 
-	fmt.Printf("🚀 Successfully extracted ASTs from %d files.\n", len(allData))
+	logf(progress, "🚀 Successfully extracted ASTs from %d files.\n", len(allData))
 	return allData, nil
+}
+
+func logf(w io.Writer, format string, args ...any) {
+	if w == nil {
+		return
+	}
+	fmt.Fprintf(w, format, args...)
 }

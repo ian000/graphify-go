@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/kings2017/graphify-go/internal/graph"
+	"github.com/ian000/graphify-go/internal/graph"
 )
 
 // ExportSystemGraphMD 1:1 复刻 Python 版的 system-graph.md 摘要

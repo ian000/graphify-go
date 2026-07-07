@@ -45,6 +45,15 @@ graphify-go
 
 # Analyze a specific directory and save reports
 graphify-go -dir ./my-project -out ./reports
+
+# Explicit subcommand form
+graphify-go analyze --dir ./my-project --out ./reports
+
+# Print machine-readable JSON to stdout
+graphify-go print --dir ./my-project --format json
+
+# Print Markdown summary to stdout
+graphify-go print --dir ./my-project --format markdown
 ```
 
 ### 💻 Development

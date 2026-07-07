@@ -3,7 +3,7 @@ package parser_test
 import (
 	"testing"
 
-	"github.com/kings2017/graphify-go/internal/parser"
+	"github.com/ian000/graphify-go/internal/parser"
 )
 
 func TestExtractor_ParseAndExtract_JavaScript(t *testing.T) {

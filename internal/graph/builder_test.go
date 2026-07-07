@@ -3,8 +3,8 @@ package graph_test
 import (
 	"testing"
 
-	"github.com/kings2017/graphify-go/internal/graph"
-	"github.com/kings2017/graphify-go/internal/parser"
+	"github.com/ian000/graphify-go/internal/graph"
+	"github.com/ian000/graphify-go/internal/parser"
 )
 
 func TestBuilder_BuildAndAnalyze(t *testing.T) {

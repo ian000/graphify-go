@@ -4,7 +4,7 @@ import (
 	randv2 "math/rand/v2"
 	"time"
 
-	"github.com/kings2017/graphify-go/internal/graph"
+	"github.com/ian000/graphify-go/internal/graph"
 	"gonum.org/v1/gonum/graph/community"
 	"gonum.org/v1/gonum/graph/simple"
 )

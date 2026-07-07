@@ -45,6 +45,15 @@ graphify-go
 
 # 扫描指定目录，并将 JSON 和 Markdown 报告导出到目标文件夹
 graphify-go -dir ./my-project -out ./reports
+
+# 显式子命令形式
+graphify-go analyze --dir ./my-project --out ./reports
+
+# 将 JSON 输出到 stdout
+graphify-go print --dir ./my-project --format json
+
+# 将 Markdown 摘要输出到 stdout
+graphify-go print --dir ./my-project --format markdown
 ```
 
 ### 💻 本地开发

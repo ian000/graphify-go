@@ -3,7 +3,7 @@ package graph_test
 import (
 	"testing"
 
-	"github.com/kings2017/graphify-go/internal/graph"
+	"github.com/ian000/graphify-go/internal/graph"
 )
 
 func TestNodeIDGeneration(t *testing.T) {

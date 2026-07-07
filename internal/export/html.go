@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/kings2017/graphify-go/internal/graph"
+	"github.com/ian000/graphify-go/internal/graph"
 )
 
 var communityColors = []string{

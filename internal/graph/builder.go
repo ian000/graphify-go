@@ -4,7 +4,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/kings2017/graphify-go/internal/parser"
+	"github.com/ian000/graphify-go/internal/parser"
 )
 
 // Builder 负责将提取的数据转化为有向图

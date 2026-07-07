@@ -1,6 +1,6 @@
-module github.com/kings2017/graphify-go
+module github.com/ian000/graphify-go
 
-go 1.26.1
+go 1.21
 
 require (
 	github.com/dominikbraun/graph v0.23.0 // indirect
