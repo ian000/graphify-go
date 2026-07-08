@@ -15,6 +15,8 @@
   ],
   "scripts": {
     "build:binary": "node -e \"require('fs').mkdirSync('./.tmp',{recursive:true})\" && go build -trimpath -o ./.tmp/graphify-release-check ./cmd/graphify",
+    "release:plan": "node scripts/release-helper.cjs plan",
+    "release:tag": "node scripts/release-helper.cjs tag",
     "release:check": "node -e \"require('fs').rmSync('./.tmp',{recursive:true,force:true}); require('fs').mkdirSync('./.tmp',{recursive:true})\" && npm pack --dry-run && npm run build:binary && node -e \"require('fs').rmSync('./.tmp',{recursive:true,force:true})\"",
     "postinstall": "node scripts/install.js || echo 'Install script failed, please download binary manually'"
   },

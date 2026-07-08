@@ -21,16 +21,24 @@ This repository ships both GitHub Release binaries and an npm wrapper package.
 
 1. Make sure `package.json` version is correct.
 2. Run `npm run release:check`.
-3. Merge to `main`.
-4. Create and push the tag:
+3. Generate the local draft:
 
 ```bash
-git tag -a v1.1.2 -m "Release v1.1.2"
+npm run release:plan
+```
+
+This writes `.release-notes/vX.Y.Z.md` and shows whether the version tag already exists.
+
+4. Merge to `main`.
+5. Create and push the tag:
+
+```bash
+npm run release:tag
 git push origin v1.1.2
 ```
 
-5. Watch `.github/workflows/release.yml`.
-6. Confirm three outcomes:
+6. Watch `.github/workflows/release.yml`.
+7. Confirm three outcomes:
    - GitHub Release created
    - binary assets uploaded
    - npm version published
