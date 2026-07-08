@@ -22,8 +22,10 @@ roles:
 | Doc Route (Bi-link) | Core Entities | Aliases | Description |
 | --- | --- | --- | --- |
 | [[graphify-go-PRD]] | `AST,Zero-LLM,Tree-sitter` | `Graphify-Go PRD,产品需求文档` | Graphify-Go 产品需求文档 (PRD) |
+| [[graphify-go-language-full-support-todo]] | `AST,Tree-sitter,ExtractedData,Graph` | `Graphify-Go Language Full Support TODO,多语言完整支持计划` | Graphify-Go 五语言完整支持开发计划 (TODO) |
 
 <!-- aictx-index-end -->
 
 ## 📌 业务模块说明
-请在此处简要说明该目录下各原子文档的协作关系和业务边界。
+- `[[graphify-go-PRD]]`: 定义产品目标、核心红线与模块职责。
+- `[[graphify-go-language-full-support-todo]]`: 承接 PRD 的多语言能力目标，拆解为可执行阶段任务与发布验收门槛。

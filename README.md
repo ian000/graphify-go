@@ -28,7 +28,7 @@ In the field of code architecture analysis, traditional tools often face several
 - [x] JavaScript / TypeScript
 - [x] Python
 - [x] Go
-- [ ] *Coming soon (Java, C, C++, Ruby, C#, Kotlin, Scala, PHP, Swift)*
+- [ ] *Coming soon (Verilog, Java, C, C++, Ruby, C#, Kotlin, Scala, PHP, Swift)*
 
 ### 🚀 Usage
 
