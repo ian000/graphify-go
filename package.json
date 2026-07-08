@@ -14,6 +14,8 @@
     "README_zh.md"
   ],
   "scripts": {
+    "build:binary": "node -e \"require('fs').mkdirSync('./.tmp',{recursive:true})\" && go build -trimpath -o ./.tmp/graphify-release-check ./cmd/graphify",
+    "release:check": "node -e \"require('fs').rmSync('./.tmp',{recursive:true,force:true}); require('fs').mkdirSync('./.tmp',{recursive:true})\" && npm pack --dry-run && npm run build:binary && node -e \"require('fs').rmSync('./.tmp',{recursive:true,force:true})\"",
     "postinstall": "node scripts/install.js || echo 'Install script failed, please download binary manually'"
   },
   "repository": {

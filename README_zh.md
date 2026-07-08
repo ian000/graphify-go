@@ -64,5 +64,7 @@ cd graphify-go
 go build ./cmd/graphify
 ```
 
+发布流程与约定见：[RELEASING.md](./RELEASING.md)
+
 ## 📄 License
 MIT License
